@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 
 public class BallCollision : MonoBehaviour
@@ -29,6 +30,10 @@ public class BallCollision : MonoBehaviour
             score+=5;
             Debug.Log("Score " + score);
             scoreRef.text = "Score: " + score;
+        }
+        if (col.gameObject.name == "Brick-end-level") {
+            Debug.Log("hit end level target: " + col.gameObject.name);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }
