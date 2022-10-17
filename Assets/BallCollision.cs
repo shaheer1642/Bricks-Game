@@ -8,7 +8,7 @@ public class BallCollision : MonoBehaviour
 {
     public int score;
     public TMP_Text scoreRef;
-    // Start is called before the first frame update
+    // Start is called before the first frame update test
     void Start()
     {
         scoreRef.text = "Score: " + score;
