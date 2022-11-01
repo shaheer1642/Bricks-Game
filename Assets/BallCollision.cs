@@ -23,8 +23,11 @@ public class BallCollision : MonoBehaviour
 
     void OnCollisionEnter(Collision col) {
         Debug.Log("OnCollisionEnter " + col.gameObject.name);
+        if (col.gameObject.name == "Paddle") {
+            Rigidbody rb = this.GetComponent<Rigidbody>();
+            rb.velocity *= 1.3f;
+        }
         if (col.gameObject.name == "Brick") {
-            Debug.Log("Destroying " + col.gameObject.name);
             Destroy(col.gameObject);
             Debug.Log("Destroyed " + col.gameObject.name);
             score+=5;

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    private float movementSpeed = 3f;
+    public float movementSpeed = 3f;
     void Start() {
     }
     // Update is called once per frame
