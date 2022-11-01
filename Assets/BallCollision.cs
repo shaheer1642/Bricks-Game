@@ -31,9 +31,5 @@ public class BallCollision : MonoBehaviour
             Debug.Log("Score " + score);
             scoreRef.text = "Score: " + score;
         }
-        if (col.gameObject.name == "Brick-end-level") {
-            Debug.Log("hit end level target: " + col.gameObject.name);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
     }
 }
