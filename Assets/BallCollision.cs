@@ -34,5 +34,8 @@ public class BallCollision : MonoBehaviour
             Debug.Log("Score " + score);
             scoreRef.text = "Score: " + score;
         }
+        if (col.gameObject.name == "BrickEndLevel") {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 }
